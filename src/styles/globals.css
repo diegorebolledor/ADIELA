@@ -1,0 +1,329 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply font-sans text-text-primary bg-brand-white;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.025em;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-medium;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-none;
+    font-weight: 500;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight;
+    font-weight: 500;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl leading-tight;
+    font-weight: 500;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl lg:text-3xl leading-tight;
+    font-weight: 500;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl lg:text-2xl leading-tight;
+    font-weight: 500;
+  }
+
+  h6 {
+    @apply text-base md:text-lg lg:text-xl leading-tight;
+    font-weight: 500;
+  }
+
+  p {
+    @apply text-sm md:text-base leading-relaxed;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Link styling - Minimal and sophisticated */
+  a {
+    @apply text-text-primary hover:text-emerald-primary transition-colors duration-400 ease-luxury;
+    text-decoration: none;
+  }
+
+  /* Section padding - Responsive whitespace */
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 sm:py-20 md:px-12 md:py-24 lg:px-16 lg:py-32 xl:py-40;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Luxury container with refined max-width */
+  .container-luxury {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16;
+  }
+}
+
+@layer components {
+  /* Button Styles - Prada-inspired minimal design */
+  .btn {
+    @apply inline-block font-sans font-medium tracking-wide text-center transition-all duration-400 ease-luxury focus:outline-none;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    padding: 0.875rem 2rem;
+    border: 1px solid transparent;
+  }
+
+  /* Responsive button sizing */
+  @screen md {
+    .btn {
+      font-size: 0.875rem;
+      padding: 1rem 2.5rem;
+    }
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-black text-brand-white hover:bg-brand-charcoal;
+    border: 1px solid #1A1A1A;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-emerald-primary text-brand-white hover:bg-emerald-light;
+    border: 1px solid #1B4F3C;
+  }
+  
+  .btn-outline {
+    @apply btn border border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-white;
+  }
+
+  .btn-outline-light {
+    @apply btn border border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-black;
+  }
+
+  .btn-outline-white {
+    @apply btn border border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-black backdrop-blur-sm;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-minimal {
+    @apply btn text-text-primary hover:text-emerald-primary px-0 py-2;
+    border: none;
+    background: transparent;
+    position: relative;
+  }
+
+  .btn-minimal::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .btn-minimal:hover::after {
+    width: 100%;
+  }
+
+  /* Card components - Minimal and sophisticated */
+  .card-luxury {
+    @apply bg-brand-white shadow-minimal hover:shadow-floating transition-shadow duration-600 ease-luxury;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .card-floating {
+    @apply bg-brand-white shadow-floating hover:shadow-depth transition-all duration-600 ease-luxury;
+    transform: translateY(0);
+  }
+
+  .card-floating:hover {
+    transform: translateY(-8px);
+  }
+
+  /* Navigation styles */
+  .nav-link {
+    @apply relative text-text-secondary hover:text-text-primary transition-colors duration-400 ease-luxury;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  /* Responsive nav link sizing */
+  @screen md {
+    .nav-link {
+      font-size: 0.875rem;
+    }
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .nav-link.active {
+    @apply text-text-primary;
+  }
+
+  .nav-link.active::after,
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Typography utilities */
+  .text-luxury {
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .text-display {
+    @apply font-display;
+    letter-spacing: -0.025em;
+  }
+
+  /* Form elements */
+  .input-luxury {
+    @apply w-full px-0 py-3 md:py-4 text-text-primary bg-transparent border-0 border-b border-stone-300 focus:border-emerald-primary focus:outline-none transition-colors duration-400 ease-luxury;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+  }
+
+  /* Responsive input sizing */
+  @screen md {
+    .input-luxury {
+      font-size: 1rem;
+    }
+  }
+
+  .input-luxury::placeholder {
+    @apply text-text-tertiary;
+    letter-spacing: 0.025em;
+  }
+
+  /* Hero section styling */
+  .hero-title {
+    @apply font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl leading-none;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+  }
+
+  .hero-subtitle {
+    @apply text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed;
+    letter-spacing: 0.025em;
+    font-weight: 300;
+  }
+
+  /* Hero background fallback - elegant gradient if image doesn't load */
+  .hero-background-fallback {
+    background: linear-gradient(135deg, 
+      rgba(27, 79, 60, 0.9) 0%, 
+      rgba(45, 95, 75, 0.8) 25%, 
+      rgba(60, 120, 95, 0.7) 50%, 
+      rgba(80, 140, 110, 0.6) 75%, 
+      rgba(100, 160, 125, 0.5) 100%
+    );
+  }
+}
+
+@layer utilities {
+  /* Scroll behavior */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text selection styling */
+  .selection-luxury ::selection {
+    background-color: rgba(27, 79, 60, 0.2);
+    color: #1A1A1A;
+  }
+
+  /* Backdrop blur effects */
+  .backdrop-luxury {
+    backdrop-filter: blur(20px) saturate(180%);
+    background-color: rgba(254, 254, 254, 0.85);
+  }
+
+  /* Grid utilities */
+  .grid-luxury {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  /* Responsive grid spacing */
+  @screen md {
+    .grid-luxury {
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  /* Aspect ratio utilities */
+  .aspect-luxury {
+    aspect-ratio: 4/5;
+  }
+
+  .aspect-square-luxury {
+    aspect-ratio: 1/1;
+  }
+
+  /* Mobile-first responsive utilities */
+  .mobile-center {
+    @apply text-center;
+  }
+
+  @screen md {
+    .mobile-center {
+      text-align: left;
+    }
+  }
+
+  /* Safe area utilities for mobile devices */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Touch-friendly interactive elements */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+} 
