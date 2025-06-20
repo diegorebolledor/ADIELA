@@ -16,8 +16,8 @@ export default {
         'emerald-primary': '#1B4F3C', // Deeper, more sophisticated emerald
         'emerald-light': '#2D6B54',
         'emerald-dark': '#0F2F22',
-        'emerald-vibrant': '#86b9b0', // Vibrant emerald for high contrast CTAs
-        'emerald-cta': '#4A9B8E', // CTA button color - more vibrant than primary
+        'emerald-vibrant': '#86b9b0', // High-contrast CTA color
+        'emerald-cta': '#4A9B8E', // Darker variant for hover
 
         // Neutral Palette - Ultra Minimal
         'stone-50': '#FAFAF9',

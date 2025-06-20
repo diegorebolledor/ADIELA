@@ -58,10 +58,10 @@ const Header = () => {
 
   return (
     <header 
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ease-luxury
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-600 ease-luxury
                   ${isScrolled 
-                    ? 'bg-brand-white/95 backdrop-blur-md shadow-luxury h-16 md:h-18 border-b border-stone-200/50' 
-                    : 'bg-brand-white/90 backdrop-blur-sm h-20 md:h-24'}`}
+                    ? 'backdrop-luxury shadow-minimal h-16 md:h-18' 
+                    : 'bg-transparent h-20 md:h-24'}`}
     >
       <div className="container-luxury h-full">
         <div className="flex items-center justify-between h-full">
@@ -141,7 +141,7 @@ const Header = () => {
                     {currentLanguage === 'en' ? 'Cambiar a Español' : 'Switch to English'}
                   </span>
                 </button>
-                <button className="btn-cta w-full">
+                <button className="btn-primary w-full">
                   {t('buttons.exploreCollection')}
                 </button>
               </div>

@@ -18,9 +18,9 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Liquid Glass Effect */}
+      {/* Background Image with Clean Overlay */}
       <div className="absolute inset-0">
-        {/* Background Image - Mountain with Golden Lyre */}
+        {/* Background Image - Mountain with Golden Lyre (your image) */}
         <img 
           src="/assets/images/hero-background.jpg"
           alt=""
@@ -34,110 +34,74 @@ const HeroSection = () => {
           }}
         />
         
-        {/* Liquid Glass Overlay - Frosted glass effect with subtle gradients */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 backdrop-blur-[2px]"></div>
+        {/* Clean Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-black/40 via-brand-black/20 to-brand-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black/50 via-transparent to-brand-black/20"></div>
         
-        {/* Enhanced Glass Morphism Layers */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-gold-400/15"></div>
+        {/* Subtle emerald accent overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-primary/5 via-transparent to-emerald-primary/10"></div>
         
-        {/* Liquid Glass Floating Elements */}
-        <div className="absolute top-1/4 right-1/4 w-72 md:w-96 h-72 md:h-96 bg-gradient-to-br from-white/20 to-emerald-400/10 rounded-full blur-3xl backdrop-blur-sm"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-56 md:w-80 h-56 md:h-80 bg-gradient-to-tl from-gold-300/20 to-white/10 rounded-full blur-2xl backdrop-blur-sm"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 md:w-96 h-64 md:h-96 bg-gradient-to-r from-emerald-300/15 to-gold-200/15 rounded-full blur-3xl backdrop-blur-sm"></div>
+        {/* Geometric accents - More subtle over the image */}
+        <div className="absolute top-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-emerald-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-48 md:w-64 h-48 md:h-64 bg-gold-accent/15 rounded-full blur-2xl"></div>
       </div>
 
-      {/* Liquid Glass Content Container */}
       <div className="container-luxury relative z-10 text-center py-24 md:py-32">
         <motion.div
-          className="relative"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
           style={{ willChange: 'transform, opacity' }}
         >
-          {/* Liquid Glass Background for Text */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl transform -rotate-1"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-emerald-500/10 to-gold-400/10 backdrop-blur-md rounded-3xl border border-white/10 shadow-xl transform rotate-1"></div>
-          
-          <div className="relative z-10 px-8 md:px-12 lg:px-16 py-12 md:py-16 lg:py-20">
-            {/* Subtitle with Glass Effect */}
-            <motion.p 
-              className="text-luxury text-white/95 mb-6 md:mb-8 lg:mb-12 text-sm md:text-base tracking-wider"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              style={{ willChange: 'opacity', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}
-            >
-              {t('hero.subtitle')}
-            </motion.p>
+          {/* Subtitle - Enhanced contrast for readability */}
+          <motion.p 
+            className="text-luxury text-brand-white/90 mb-6 md:mb-8 lg:mb-12 text-sm md:text-base"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            style={{ willChange: 'opacity' }}
+          >
+            {t('hero.subtitle')}
+          </motion.p>
 
-            {/* Main Headline with Liquid Glass Typography */}
-            <motion.h1 
-              className="hero-title text-white mb-6 md:mb-8 lg:mb-12 max-w-5xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              style={{ 
-                willChange: 'opacity',
-                textShadow: '0 4px 20px rgba(0,0,0,0.4), 0 0 30px rgba(255,255,255,0.1)',
-                background: 'linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #ffffff 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}
-            >
-              <span className="block">{t('hero.title')}</span>
-              <span 
-                className="block mt-2"
-                style={{
-                  background: 'linear-gradient(135deg, #10B981 0%, #34D399 50%, #F59E0B 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  textShadow: '0 2px 15px rgba(16, 185, 129, 0.3)'
-                }}
-              >
-                {t('hero.titleAccent')}
-              </span>
-            </motion.h1>
+          {/* Main Headline - Bold white text for dramatic contrast */}
+          <motion.h1 
+            className="hero-title text-brand-white mb-6 md:mb-8 lg:mb-12 max-w-5xl mx-auto px-4 drop-shadow-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            style={{ willChange: 'opacity' }}
+          >
+            <span className="block">{t('hero.title')}</span>
+            <span className="text-emerald-primary drop-shadow-md">{t('hero.titleAccent')}</span>
+          </motion.h1>
 
-            {/* Description with Enhanced Glass Effect */}
-            <motion.p 
-              className="hero-subtitle text-white/90 max-w-3xl mx-auto mb-8 md:mb-12 lg:mb-16"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              style={{ 
-                willChange: 'opacity',
-                textShadow: '0 2px 10px rgba(0,0,0,0.4)'
-              }}
-            >
-              {t('hero.description')}
-            </motion.p>
+          {/* Description - Excellent readability over image */}
+          <motion.p 
+            className="hero-subtitle text-brand-white/85 max-w-3xl mx-auto mb-8 md:mb-12 lg:mb-16 px-4 drop-shadow-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            style={{ willChange: 'opacity' }}
+          >
+            {t('hero.description')}
+          </motion.p>
 
-            {/* Liquid Glass Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              style={{ willChange: 'opacity' }}
-            >
-              <Link 
-                to="/products" 
-                className="liquid-glass-btn liquid-glass-btn-primary w-full sm:w-auto"
-              >
-                {t('hero.exploreCollection')}
-              </Link>
-              <Link 
-                to="/about" 
-                className="liquid-glass-btn liquid-glass-btn-secondary w-full sm:w-auto"
-              >
-                {t('hero.ourStory')}
-              </Link>
-            </motion.div>
-          </div>
+          {/* Call-to-action buttons - High contrast for maximum impact */}
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            style={{ willChange: 'opacity' }}
+          >
+            <Link to="/products" className="btn-cta w-full sm:w-auto">
+              {t('hero.exploreCollection')}
+            </Link>
+            <Link to="/about" className="btn-outline-white w-full sm:w-auto">
+              {t('hero.ourStory')}
+            </Link>
+          </motion.div>
         </motion.div>
 
         {/* Scroll indicator - Fades out when scrolling */}
