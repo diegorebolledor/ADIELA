@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Home",
+    "collection": "Collection",
+    "journal": "Journal",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Colombian Emeralds",
+    "title": "Eternal",
+    "titleAccent": "Elegance",
+    "description": "Handcrafted emerald jewelry. Ancient beauty meets modern luxury in 18k gold.",
+    "exploreCollection": "Discover Collection",
+    "ourStory": "Our Story",
+    "scroll": "Scroll"
+  },
+  "story": {
+    "subtitle": "Heritage Collection",
+    "title": "Timeless",
+    "titleAccent": "Craftsmanship",
+    "paragraph1": "Born from passion for emerald beauty. Each piece reflects Colombian heritage and modern artistry.",
+    "paragraph2": "Jewelry that transcends time. Created for life's most precious moments.",
+    "paragraph3": "Finest emeralds set in 18k gold. Where tradition meets contemporary luxury.",
+    "discoverStory": "Learn More"
+  },
+  "featured": {
+    "title": "Signature",
+    "titleAccent": "Pieces",
+    "subtitle": "Exceptional Beauty"
+  },
+  "video": {
+    "title": "Artisan",
+    "titleAccent": "Mastery",
+    "subtitle": "Crafted by Hand",
+    "description": "Witness the artistry behind each piece. From emerald selection to final polish."
+  },
+  "journal": {
+    "title": "From Our",
+    "titleAccent": "Journal",
+    "subtitle": "Stories & Insights",
+    "readMore": "Read More"
+  },
+  "footer": {
+    "newsletter": "Stay Updated",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "copyright": "© 2024 ADIELA. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "buttons": {
+    "exploreCollection": "Explore Collection",
+    "viewAll": "View All",
+    "addToCart": "Add to Cart",
+    "learnMore": "Learn More"
+  }
+}

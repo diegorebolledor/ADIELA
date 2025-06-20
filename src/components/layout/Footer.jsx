@@ -7,14 +7,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const FooterLogo = () => (
   <Link 
     to="/" 
-    className="flex items-center hover:opacity-80 transition-opacity duration-400 ease-luxury"
+    className="text-2xl md:text-3xl font-display font-medium text-brand-white hover:text-emerald-primary transition-colors duration-400 ease-luxury"
+    style={{ letterSpacing: '0.1em' }}
   >
-    <img 
-      src="/assets/images/logo.png" 
-      alt="ADIELA - Jewelry & Emeralds" 
-      className="h-16 md:h-18 w-auto object-contain filter brightness-0 invert"
-      loading="lazy"
-    />
+    ADIELA
   </Link>
 );
 

@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "collection": "Colección",
+    "journal": "Diario",
+    "about": "Historia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "Esmeraldas Colombianas",
+    "title": "Elegancia",
+    "titleAccent": "Eterna",
+    "description": "Joyería artesanal con esmeraldas. Belleza ancestral encuentra lujo moderno en oro 18k.",
+    "exploreCollection": "Descubrir Colección",
+    "ourStory": "Nuestra Historia",
+    "scroll": "Deslizar"
+  },
+  "story": {
+    "subtitle": "Colección Patrimonio",
+    "title": "Artesanía",
+    "titleAccent": "Atemporal",
+    "paragraph1": "Nacida de la pasión por la belleza esmeralda. Cada pieza refleja herencia colombiana y arte moderno.",
+    "paragraph2": "Joyería que trasciende el tiempo. Creada para los momentos más preciosos de la vida.",
+    "paragraph3": "Las mejores esmeraldas en oro 18k. Donde tradición encuentra lujo contemporáneo.",
+    "discoverStory": "Saber Más"
+  },
+  "featured": {
+    "title": "Piezas",
+    "titleAccent": "Insignia",
+    "subtitle": "Belleza Excepcional"
+  },
+  "video": {
+    "title": "Maestría",
+    "titleAccent": "Artesanal",
+    "subtitle": "Hecho a Mano",
+    "description": "Descubre la artesanía detrás de cada pieza. Desde selección de esmeraldas hasta pulido final."
+  },
+  "journal": {
+    "title": "Desde Nuestro",
+    "titleAccent": "Diario",
+    "subtitle": "Historias e Inspiración",
+    "readMore": "Leer Más"
+  },
+  "footer": {
+    "newsletter": "Mantente Informado",
+    "emailPlaceholder": "Ingresa tu email",
+    "subscribe": "Suscribirse",
+    "quickLinks": "Enlaces Rápidos",
+    "followUs": "Síguenos",
+    "copyright": "© 2024 ADIELA. Todos los derechos reservados.",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio"
+  },
+  "buttons": {
+    "exploreCollection": "Explorar Colección",
+    "viewAll": "Ver Todo",
+    "addToCart": "Agregar al Carrito",
+    "learnMore": "Saber Más"
+  }
+}
