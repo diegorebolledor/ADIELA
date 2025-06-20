@@ -7,10 +7,14 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const Logo = () => (
   <Link 
     to="/" 
-    className="text-2xl md:text-3xl font-display font-medium text-brand-black hover:text-emerald-primary transition-colors duration-400 ease-luxury"
-    style={{ letterSpacing: '0.1em' }}
+    className="flex items-center hover:opacity-80 transition-opacity duration-400 ease-luxury"
   >
-    ADIELA
+    <img 
+      src="/assets/images/logo.png" 
+      alt="ADIELA - Jewelry & Emeralds" 
+      className="h-12 md:h-14 w-auto object-contain"
+      loading="eager"
+    />
   </Link>
 );
 
