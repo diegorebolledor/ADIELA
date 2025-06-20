@@ -6,8 +6,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const HeroSection = () => {
   const { t } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -18,69 +16,26 @@ const HeroSection = () => {
   // Calculate scroll indicator opacity (disappears after 100px of scroll)
   const scrollIndicatorOpacity = Math.max(0, 1 - scrollY / 100);
 
-  // Try to load the hero image
-  useEffect(() => {
-    const img = new Image();
-    img.onload = () => setImageLoaded(true);
-    img.onerror = () => setImageError(true);
-    img.src = '/assets/images/hero-background.jpg';
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Clean Overlay */}
+      {/* Your Dither Image Background */}
       <div className="absolute inset-0">
-        {imageLoaded ? (
-          /* Your real image - Mountain with Golden Lyre */
-          <img 
-            src="/assets/images/hero-background.jpg"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            style={{ 
-              willChange: 'transform',
-              transform: 'translateZ(0)'
-            }}
-          />
-        ) : (
-          /* Elegant Background - Inspired by your mountain/lyre image */
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-dark via-emerald-primary to-gold-dark">
-            {/* Mountain silhouettes effect */}
-            <div className="absolute inset-0 opacity-30">
-              <svg viewBox="0 0 1200 800" className="w-full h-full object-cover">
-                <defs>
-                  <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#2D6B54" stopOpacity="0.8"/>
-                    <stop offset="50%" stopColor="#1B4F3C" stopOpacity="0.6"/>
-                    <stop offset="100%" stopColor="#0F2F22" stopOpacity="0.4"/>
-                  </linearGradient>
-                </defs>
-                <polygon points="0,800 0,400 200,200 400,350 600,150 800,300 1000,100 1200,250 1200,800" fill="url(#mountainGrad)"/>
-                <polygon points="0,800 0,500 150,350 350,450 550,250 750,400 950,200 1200,350 1200,800" fill="url(#mountainGrad)" opacity="0.7"/>
-              </svg>
-            </div>
-            
-            {/* Golden lyre inspiration */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20">
-              <div className="w-32 h-32 md:w-48 md:h-48 border-4 border-gold-accent rounded-full flex items-center justify-center">
-                <div className="w-16 h-16 md:w-24 md:h-24 border-2 border-gold-light rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        )}
+        <img 
+          src="/assets/images/hero-background.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          style={{ 
+            willChange: 'transform',
+            transform: 'translateZ(0)'
+          }}
+        />
         
-        {/* Clean Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-black/30 via-brand-black/10 to-brand-black/20"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 via-transparent to-brand-black/10"></div>
-        
-        {/* Subtle emerald accent overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-primary/10 via-transparent to-gold-accent/10"></div>
-        
-        {/* Geometric accents - More subtle over the background */}
-        <div className="absolute top-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-emerald-primary/15 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-48 md:w-64 h-48 md:h-64 bg-gold-accent/20 rounded-full blur-2xl"></div>
+        {/* Minimal Overlay for Text Readability - Optimized for dither image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-black/25 via-transparent to-brand-black/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black/35 via-transparent to-transparent"></div>
       </div>
 
       <div className="container-luxury relative z-10 text-center py-24 md:py-32">
