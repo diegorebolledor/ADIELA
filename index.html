@@ -26,11 +26,20 @@
     <meta property="twitter:description" content="Discover our inaugural collection of exquisite emerald jewelry. Timeless elegance in 18k gold.">
     <meta property="twitter:image" content="https://www.adiela.com/assets/images/twitter-card-image.jpg"> <!-- TODO: Replace with actual Twitter card image URL -->
 
-    <!-- Fonts: Prada-inspired modern typography -->
+    <!-- Performance Optimizations -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preload" href="/assets/images/hero-background.jpg" as="image" fetchpriority="high">
+    
+    <!-- Fonts: Optimized loading for Core Web Vitals -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Futura+PT:wght@400;500;600;700;800&family=Didot:wght@400;700&family=Helvetica+Neue:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body { margin: 0; font-family: 'Inter', sans-serif; }
+      .hero-background-fallback { background: linear-gradient(135deg, #1B4F3C 0%, #0F2F22 100%); }
+    </style>
     
     <!-- Canonical URL - Important for SEO -->
     <link rel="canonical" href="https://www.adiela.com/" /> <!-- TODO: Replace with actual URL -->

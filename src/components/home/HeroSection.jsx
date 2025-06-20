@@ -23,13 +23,19 @@ const HeroSection = () => {
         {/* Fallback background - elegant emerald gradient */}
         <div className="absolute inset-0 hero-background-fallback"></div>
         
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/assets/images/hero-background.jpg')`,
+        {/* Background Image - Optimized for LCP */}
+        <img 
+          src="/assets/images/hero-background.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          style={{ 
+            willChange: 'transform',
+            transform: 'translateZ(0)'
           }}
-        ></div>
+        />
         
         {/* Sophisticated Overlay - Multiple layers for depth */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-black/40 via-brand-black/20 to-brand-black/30"></div>
@@ -45,16 +51,18 @@ const HeroSection = () => {
 
       <div className="container-luxury relative z-10 text-center py-24 md:py-32">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          style={{ willChange: 'transform, opacity' }}
         >
           {/* Subtitle - Enhanced contrast for readability */}
           <motion.p 
             className="text-luxury text-brand-white/90 mb-6 md:mb-8 lg:mb-12 text-sm md:text-base"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            style={{ willChange: 'opacity' }}
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -62,9 +70,10 @@ const HeroSection = () => {
           {/* Main Headline - Bold white text for dramatic contrast */}
           <motion.h1 
             className="hero-title text-brand-white mb-6 md:mb-8 lg:mb-12 max-w-5xl mx-auto px-4 drop-shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            style={{ willChange: 'opacity' }}
           >
             <span className="block">{t('hero.title')}</span>
             <span className="text-emerald-primary drop-shadow-md">{t('hero.titleAccent')}</span>
@@ -73,9 +82,10 @@ const HeroSection = () => {
           {/* Description - Excellent readability over image */}
           <motion.p 
             className="hero-subtitle text-brand-white/85 max-w-3xl mx-auto mb-8 md:mb-12 lg:mb-16 px-4 drop-shadow-sm"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            style={{ willChange: 'opacity' }}
           >
             {t('hero.description')}
           </motion.p>

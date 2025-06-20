@@ -13,5 +13,27 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true
+  },
+  build: {
+    // Optimizations for Core Web Vitals
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          motion: ['framer-motion'],
+          router: ['react-router-dom']
+        }
+      }
+    },
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom']
   }
 }) 
