@@ -2,12 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async'; // Using react-helmet-async for better SSR and async support
 
 const SEO = ({ title, description, keywords, image, noindex, canonicalUrl }) => {
-  const siteName = "Emerald Heritage";
-  const defaultDescription = "Exquisite Colombian emeralds and 18k gold jewelry, inspired by tradition and timeless elegance. Explore our curated collection.";
-  const defaultKeywords = "colombian emeralds, 18k gold, luxury jewelry, fine jewelry, emerald earrings, emerald pendants, heritage gems, ethical jewelry";
-  // TODO: Replace with your actual domain and a default OG image
-  const baseUrl = "https://www.your-emerald-heritage.com"; 
-  const defaultOgImage = `${baseUrl}/assets/images/og-default.jpg`;
+  const siteName = "ADIELA";
+  const defaultDescription = "ADIELA - Exquisite Colombian emerald jewelry collection in 18k gold. Handcrafted pieces that blend ancient beauty with modern luxury. Discover emerald earrings, pendants, and more.";
+  const defaultKeywords = "ADIELA, colombian emeralds, emerald jewelry collection, 18k gold jewelry, luxury emerald jewelry, emerald earrings, emerald pendants, colombian heritage jewelry, handcrafted emerald jewelry, ethical emeralds";
+  const baseUrl = "https://adiela.vercel.app"; 
+  const defaultOgImage = `${baseUrl}/assets/images/adiela-og-image.jpg`;
 
   const pageTitle = title ? `${title} | ${siteName}` : siteName;
   const pageDescription = description || defaultDescription;

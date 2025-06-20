@@ -10,29 +10,31 @@ const products = [
     id: '1',
     slug: 'emerald-stud-earrings-18k-gold',
     name: 'Radiant Emerald Stud Earrings',
-    description: 'Classic 18k gold stud earrings featuring vibrant Colombian emeralds.',
+    description: 'Classic 18k gold stud earrings featuring vibrant Colombian emeralds - ADIELA signature piece.',
     price: '1250.00',
     images: [
-      '/assets/images/products/earrings_main.jpg', // TODO: Replace with actual image path
-      '/assets/images/products/earrings_detail1.jpg', // TODO: Replace with actual image path
+      '/assets/images/products/emerald-stud-earrings-main.jpg',
+      '/assets/images/products/emerald-stud-earrings-detail.jpg',
     ],
     category: 'Earrings',
     material: '18k Yellow Gold, Colombian Emeralds',
-    availability: 'In Stock'
+    availability: 'In Stock',
+    altText: 'Radiant emerald stud earrings modelo clásico - Colombian emerald earrings in 18k gold from ADIELA collection'
   },
   {
     id: '2',
     slug: 'heritage-emerald-cross-pendant-18k-gold',
     name: 'Heritage Emerald Cross Pendant',
-    description: 'An exquisite 18k gold cross adorned with sixteen brilliant Colombian emeralds.',
+    description: 'An exquisite 18k gold cross adorned with sixteen brilliant Colombian emeralds - ADIELA heritage piece.',
     price: '2800.00',
     images: [
-      '/assets/images/products/cross_main.jpg', // TODO: Replace with actual image path
-      '/assets/images/products/cross_detail1.jpg', // TODO: Replace with actual image path
+      '/assets/images/products/emerald-cross-pendant-main.jpg',
+      '/assets/images/products/emerald-cross-pendant-detail.jpg',
     ],
     category: 'Pendants',
     material: '18k Yellow Gold, 16 Colombian Emeralds',
-    availability: 'In Stock'
+    availability: 'In Stock',
+    altText: 'Heritage emerald cross pendant modelo heritage - Colombian emerald pendant cross in 18k gold from ADIELA collection'
   },
   // Add more products as needed
 ];
@@ -41,15 +43,15 @@ const ProductListingPage = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Our Collection - Emerald Jewelry | Emerald Heritage"
-        description="Explore our exclusive collection of Colombian emerald jewelry, crafted in 18k gold. Discover earrings, pendants, and more symbols of heritage and luxury."
-        keywords="all products, emerald collection, 18k gold jewelry, shop emeralds, colombian emeralds"
+        title="ADIELA Emerald Jewelry Collection - Handcrafted Colombian Emeralds in 18k Gold"
+        description="Discover the ADIELA collection: exquisite Colombian emerald jewelry handcrafted in 18k gold. Shop emerald earrings, pendants, and luxury pieces that blend ancient beauty with modern elegance."
+        keywords="ADIELA collection, colombian emerald jewelry, 18k gold emerald earrings, emerald pendants, luxury emerald jewelry, handcrafted emerald jewelry, colombian heritage jewelry"
       />
       <div className="container-max section-padding">
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-emerald-primary mb-3">Our Collection</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-emerald-primary mb-3">ADIELA Collection</h1>
           <p className="text-lg text-neutral-text-light max-w-2xl mx-auto">
-            Each piece in our collection is a testament to the enduring beauty of Colombian emeralds and the artistry of fine jewelry.
+            Handcrafted Colombian emerald jewelry in 18k gold. Each piece embodies the timeless beauty and heritage of our artisanal craftsmanship.
           </p>
         </div>
 

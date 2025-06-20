@@ -21,10 +21,10 @@ const ProductCard = ({ product }) => {
     >
       <Link to={`/products/${product.slug}`} className="block relative aspect-square overflow-hidden">
         <img 
-          // TODO: Replace with actual product image. Use a high-quality square placeholder.
           src={product.images && product.images[0] ? product.images[0] : '/assets/images/products/placeholder_product.jpg'} 
-          alt={product.name}
+          alt={product.altText || `${product.name} - ${product.category || 'Emerald jewelry'} piece from ADIELA Colombian emerald collection in 18k gold`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-apple"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 ease-apple flex items-center justify-center">
           <Eye size={36} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-apple" />

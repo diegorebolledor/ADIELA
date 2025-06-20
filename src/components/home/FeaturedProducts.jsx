@@ -68,8 +68,9 @@ const FeaturedProducts = () => {
                 <div className="aspect-luxury bg-white mb-6 relative overflow-hidden rounded-sm border border-stone-200">
                   <img 
                     src={product.images[0]} 
-                    alt={product.name[currentLanguage]}
+                    alt={`${product.name[currentLanguage]} - Colombian emerald ${product.category.toLowerCase()} in 18k gold from ADIELA collection`}
                     className="w-full h-full object-contain p-8 transition-transform duration-700 hover:scale-105"
+                    loading="lazy"
                     onError={(e) => {
                       // Fallback to placeholder if image doesn't load
                       e.target.style.display = 'none';
