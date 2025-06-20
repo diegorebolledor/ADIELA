@@ -90,14 +90,15 @@ const HeroSection = () => {
             {t('hero.description')}
           </motion.p>
 
-          {/* Call-to-action buttons - Enhanced for visibility */}
+          {/* Call-to-action buttons - High contrast for maximum impact */}
           <motion.div
             className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            style={{ willChange: 'opacity' }}
           >
-            <Link to="/products" className="btn-primary w-full sm:w-auto shadow-lg">
+            <Link to="/products" className="btn-cta w-full sm:w-auto">
               {t('hero.exploreCollection')}
             </Link>
             <Link to="/about" className="btn-outline-white w-full sm:w-auto">

@@ -99,13 +99,46 @@
   }
 
   .btn-primary {
-    @apply btn bg-brand-black text-brand-white hover:bg-brand-charcoal;
-    border: 1px solid #1A1A1A;
+    @apply btn bg-emerald-cta text-brand-white hover:bg-emerald-primary shadow-lg hover:shadow-xl;
+    border: 1px solid #4A9B8E;
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
   }
   
   .btn-secondary {
-    @apply btn bg-emerald-primary text-brand-white hover:bg-emerald-light;
-    border: 1px solid #1B4F3C;
+    @apply btn bg-emerald-vibrant text-brand-white hover:bg-emerald-cta shadow-md hover:shadow-lg;
+    border: 1px solid #86b9b0;
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+  }
+
+  /* High-impact CTA button for maximum conversion */
+  .btn-cta {
+    @apply btn bg-emerald-vibrant text-brand-white hover:bg-emerald-cta;
+    border: 2px solid #86b9b0;
+    box-shadow: 0 4px 14px rgba(134, 185, 176, 0.4);
+    transform: translateY(0) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  .btn-cta:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(134, 185, 176, 0.6);
+    border-color: #4A9B8E;
+  }
+
+  .btn-cta:active {
+    transform: translateY(-1px) scale(1.01);
   }
   
   .btn-outline {

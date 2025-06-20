@@ -127,7 +127,7 @@ const FeaturedProducts = () => {
         )}
 
         <div className="text-center mt-12 md:mt-16">
-          <Link to="/products" className="btn-primary">
+                      <Link to="/products" className="btn-cta">
             {t('buttons.viewAll')}
           </Link>
         </div>

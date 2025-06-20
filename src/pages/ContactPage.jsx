@@ -96,7 +96,7 @@ const ContactPage = () => {
                     ></textarea>
                   </div>
                   <div>
-                    <button type="submit" className="btn-primary w-full md:w-auto">
+                    <button type="submit" className="btn-cta w-full md:w-auto">
                       {t('contact.sendMessage')}
                     </button>
                   </div>
